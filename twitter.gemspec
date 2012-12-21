@@ -12,16 +12,17 @@ Gem::Specification.new do |spec|
   spec.cert_chain  = ['certs/sferik.pem']
   spec.description = %q{A Ruby interface to the Twitter API.}
   spec.email = ['nunemaker@gmail.com', 'wynn.netherland@gmail.com', 'sferik@gmail.com', 'steve.richert@gmail.com', 'steve.agalloco@gmail.com']
-  spec.files = %w(.yardopts CHANGELOG.md CONTRIBUTING.md LICENSE.md README.md Rakefile twitter.gemspec)
   spec.files += Dir.glob("lib/**/*.rb")
   spec.files += Dir.glob("spec/**/*")
+  spec.files = %w(.yardopts CHANGELOG.md CONTRIBUTING.md LICENSE.md README.md Rakefile twitter.gemspec)
   spec.homepage = 'http://sferik.github.com/twitter/'
   spec.licenses = ['MIT']
   spec.name = 'twitter'
   spec.require_paths = ['lib']
+  spec.required_ruby_version = '>= 1.9.2'
   spec.required_rubygems_version = '>= 1.3.5'
+  spec.required_rubygems_version = '>= 1.3.6'
   spec.signing_key = File.expand_path("~/.gem/private_key.pem") if $0 =~ /gem\z/
-  spec.summary = spec.description
   spec.test_files = Dir.glob("spec/**/*")
   spec.version = Twitter::Version
 end
